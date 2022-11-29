@@ -31,8 +31,6 @@ export default function Meme() {
             [name]: value
         }))
       }
-
-      console.log(Meme);
     
 
   return (
@@ -44,6 +42,7 @@ export default function Meme() {
                 name='topText'
                 onChange={handleChange}
                 value={Meme.topText}
+                className="form--input"
             />
             <input 
                 type="text" 
@@ -51,11 +50,12 @@ export default function Meme() {
                 name='bottomText'
                 onChange={handleChange}
                 value={Meme.bottomText}
+                className="form--input"
             />
-            <button onClick={changeImage}>Get a new meme image</button>
+            <button className='form--button' onClick={changeImage}>Get a new meme image 🖼</button>
         </div>
         <div className="meme">
-            <img src={Meme.memeImg} alt="Meme Image" />
+            <img src={Meme.memeImg} alt="Meme Image" className='meme--image'/>
             <h2 className='meme--text top'>{Meme.topText}</h2>
             <h2 className='meme--text bottom'>{Meme.bottomText}</h2>
         </div>
